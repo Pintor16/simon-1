@@ -68,24 +68,13 @@ void setup() {
 void loop() {
 
 
- sensorValue0 = analogRead(ldr1);
-  Serial.println(sensorValue0);
-  delay(1);  
-  sensorValue1 = analogRead(ldr2);
-  Serial.println(sensorValue1);
-  delay(1);  
+ sensorValue0 = analogRead(ldr1); 
+  sensorValue1 = analogRead(ldr2);  
   sensorValue2 = analogRead(ldr3);
-  Serial.println(sensorValue2);
-  delay(1);  
   sensorValue3 = analogRead(ldr4);
-  Serial.println(sensorValue3);
-  delay(1);  
   sensorValue4 = analogRead(ldr5);
-  Serial.println(sensorValue4);
-  delay(1);  
   sensorValue5 = analogRead(ldr6);
-  Serial.println(sensorValue5);
-  delay(1); 
+
 
 n=a;
 delay(3000);
@@ -97,7 +86,7 @@ delay(3000);
   digitalWrite (led4,LOW);
   digitalWrite (led7,LOW);  
 
-  if (sensorValue3 < 10){
+  if (sensorValue3 < 35){
   digitalWrite (led1,HIGH);
   digitalWrite (led4,HIGH);
   digitalWrite (led7,HIGH);
@@ -107,10 +96,10 @@ delay(3000);
   digitalWrite (led7,LOW);
  d=a;
   }
- if (sensorValue5 < 10){
+ if (sensorValue5 < 35){
   d=z;
  }
-  if (sensorValue4 < 10){
+  if (sensorValue4 < 35){
   d=z;
  }
  if(d==z){
@@ -172,7 +161,7 @@ o=c;
   digitalWrite (led3,LOW);
   digitalWrite (led6,LOW);
   digitalWrite (led9,LOW);
-  if (sensorValue3 < 10){
+  if (sensorValue3 < 35){
   digitalWrite (led1,HIGH);
   digitalWrite (led4,HIGH);
   digitalWrite (led7,HIGH);
@@ -182,7 +171,7 @@ o=c;
   digitalWrite (led7,LOW);
  d=a;
   }
-  if(sensorValue5 < 10){
+  if(sensorValue5 < 35){
   digitalWrite (led3,HIGH);
   digitalWrite (led6,HIGH);
   digitalWrite (led9,HIGH);
@@ -192,10 +181,10 @@ o=c;
   digitalWrite (led9,LOW);
  cc=c;
   }
- if (sensorValue3 < 10){
+ if (sensorValue3 < 35){
   cc=z;
  }
-  if (sensorValue4 < 10){
+  if (sensorValue4 < 35){
   cc=z;
  }
  if(cc==z){
@@ -276,7 +265,7 @@ d=0;
   digitalWrite (led7,LOW);
  d=a;
   }
-  if(sensorValue5 < 10){
+  if(sensorValue5 < 35){
   digitalWrite (led3,HIGH);
   digitalWrite (led6,HIGH);
   digitalWrite (led9,HIGH);
@@ -287,7 +276,7 @@ d=0;
  cc=c;
   }
 
-  if (sensorValue4 < 10){
+  if (sensorValue4 < 35){
   digitalWrite (led2,HIGH);
   digitalWrite (led5,HIGH);
   digitalWrite (led8,HIGH);
@@ -297,10 +286,10 @@ d=0;
   digitalWrite (led8,LOW);
   e=b;
 }  
- if (sensorValue3 < 10){
+ if (sensorValue3 < 35){
   e=z;
  }
-  if (sensorValue5 < 10){
+  if (sensorValue5 < 35){
   e=z;
  }
  if(e==z){
@@ -383,4 +372,10 @@ delay(5000);
  }
  } 
  }
+  Serial.println(sensorValue0);
+  Serial.println(sensorValue1);
+  Serial.println(sensorValue2);
+  Serial.println(sensorValue3);
+  Serial.println(sensorValue4);
+  Serial.println(sensorValue5);
 }
