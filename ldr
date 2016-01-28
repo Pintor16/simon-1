@@ -38,19 +38,18 @@ void setup() {
   pinMode(led8, OUTPUT);
   pinMode(led9, OUTPUT);
 
-  pinMode(ldr6, INPUT);
+  
 }
 void loop() {
 
  
+sensorValue0=analogRead(ldr1);
+sensorValue1=analogRead(ldr2);
+sensorValue2=analogRead(ldr3);
+sensorValue3=analogRead(ldr4);
+sensorValue4=analogRead(ldr5);
+sensorValue5=analogRead(ldr6);
 
-
-/*int sensorValue01=sensorValue0+sensorValue1;
-int sensorValue23=sensorValue2+sensorValue3;
-int sensorValue45=sensorValue4+sensorValue5;
-int sensorValue35=sensorValue3+sensorValue5;
-int sensorValue02=sensorValue0+sensorValue2;
-int sensorValue51=sensorValue5+sensorValue1;*/
 
 int sensorValue03=sensorValue0+sensorValue3; //led1
 int sensorValue04=sensorValue0+sensorValue4; //led2
@@ -63,6 +62,7 @@ int sensorValue15=sensorValue1+sensorValue5; //led6
 int sensorValue23=sensorValue2+sensorValue3; //led7
 int sensorValue24=sensorValue2+sensorValue4; //led8
 int sensorValue25=sensorValue2+sensorValue5; //led9
+
 
 if(sensorValue03<25){
   digitalWrite (led1,HIGH);
@@ -126,4 +126,13 @@ if(sensorValue25<25){
 if(sensorValue25>25){
   digitalWrite (led9,LOW);
 }
+Serial.println(sensorValue03);
+Serial.println(sensorValue04);
+Serial.println(sensorValue05);
+Serial.println(sensorValue13);
+Serial.println(sensorValue14);
+Serial.println(sensorValue15);
+Serial.println(sensorValue23);
+Serial.println(sensorValue24);
+Serial.println(sensorValue25);
 }
